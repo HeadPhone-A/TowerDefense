@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class BuildManager : MonoBehaviour
 {
@@ -16,8 +14,11 @@ public class BuildManager : MonoBehaviour
     }
 
     public GameObject buildEffectPrefab = null;
+    public NodeUI nodeUI;
+    public Shop shop;
 
     private TurretBlueprint turretToBuild = null;
+    private Node selectedNode = null;
 
     public bool CanBuild { get { return turretToBuild != null; } }
     public bool HasMoney { get { return PlayerStats.Money >= turretToBuild.cost; } }
@@ -44,8 +45,30 @@ public class BuildManager : MonoBehaviour
         Debug.Log("포탑 건설 성공! 남은 소지금: " + PlayerStats.Money);
     }
 
+    public void SelectNode(Node node)
+    {
+        if(selectedNode == node)
+        {
+            DeselectNode();
+            return;
+        }
+
+        shop.CloseTurretBuyInfoWin();
+        selectedNode = node;
+        turretToBuild = null;
+        nodeUI.SetTarget(node);
+    }
+
+    public void DeselectNode()
+    {
+        selectedNode = null;
+        nodeUI.Hide();
+    }
+
     public void SelectTurretToBuild(TurretBlueprint turret)
     {
         turretToBuild = turret;
+        selectedNode = null;
+        nodeUI.Hide();
     }
 }

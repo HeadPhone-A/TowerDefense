@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class Node : MonoBehaviour
@@ -12,7 +10,7 @@ public class Node : MonoBehaviour
     public Vector3 positionOffset;
 
     public GameObject turret;
-    private Renderer rend;
+    public Renderer rend;
     private BuildManager buildManager;
 
     private void Start()
@@ -35,14 +33,14 @@ public class Node : MonoBehaviour
             return;
         }
 
-        if (!buildManager.CanBuild)
+        if(turret != null)
         {
+            buildManager.SelectNode(this);
             return;
         }
 
-        if(turret != null)
+        if (!buildManager.CanBuild)
         {
-            Debug.Log("이 곳엔 이미 터렛이 있어요!");
             return;
         }
 

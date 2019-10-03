@@ -20,7 +20,7 @@ public class Shop : MonoBehaviour
 
     [Header("[ Turret Shop Settings ]")]
     public TurretBlueprint standardTurret;
-    public TurretBlueprint missileTurret;
+    public TurretBlueprint rocketTurret;
     public TurretBlueprint laserTurret;
 
     private BuildManager buildManager;
@@ -34,6 +34,7 @@ public class Shop : MonoBehaviour
     {
         turretBuyInfoWinTitle.text = "BUY " + turret.name;
         turretBuyInfoWinIcon.sprite = turret.icon;
+        turretBuyInfoWin.SetActive(true);
     }
 
     public void CloseTurretBuyInfoWin()
@@ -47,15 +48,13 @@ public class Shop : MonoBehaviour
         buildManager.SelectTurretToBuild(standardTurret);
         TurretBuyInfoWinUpdate(standardTurret);
         gameObject.SetActive(false);
-        turretBuyInfoWin.SetActive(true);
     }
 
-    public void SelectMissileTurret()
+    public void SelectRocketTurret()
     {
-        buildManager.SelectTurretToBuild(missileTurret);
-        TurretBuyInfoWinUpdate(missileTurret);
+        buildManager.SelectTurretToBuild(rocketTurret);
+        TurretBuyInfoWinUpdate(rocketTurret);
         gameObject.SetActive(false);
-        turretBuyInfoWin.SetActive(true);
     }
 
     public void SelectLaserTurret()
@@ -63,6 +62,5 @@ public class Shop : MonoBehaviour
         buildManager.SelectTurretToBuild(laserTurret);
         TurretBuyInfoWinUpdate(laserTurret);
         gameObject.SetActive(false);
-        turretBuyInfoWin.SetActive(true);
     }
 }

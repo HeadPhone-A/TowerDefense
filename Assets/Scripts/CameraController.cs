@@ -46,6 +46,12 @@ public class CameraController : MonoBehaviour {
 
     private void Update()
     {
+        if (GameManager.GameIsOver)
+        {
+            this.enabled = false;
+            return;
+        }
+
         CameraZoom();
         CameraMove();
     }
