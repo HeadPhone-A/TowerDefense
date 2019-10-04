@@ -14,8 +14,8 @@ public class BuildManager : MonoBehaviour
     }
 
     public GameObject buildEffectPrefab = null;
-    public NodeUI nodeUI;
-    public Shop shop;
+    public NodeUI nodeSelectUI;
+    public Shop shopUI;
 
     private TurretBlueprint turretToBuild = null;
     private Node selectedNode = null;
@@ -53,22 +53,22 @@ public class BuildManager : MonoBehaviour
             return;
         }
 
-        shop.CloseTurretBuyInfoWin();
+        shopUI.CloseTurretBuyInfoWin();
         selectedNode = node;
         turretToBuild = null;
-        nodeUI.SetTarget(node);
+        nodeSelectUI.SetTarget(node);
     }
 
     public void DeselectNode()
     {
         selectedNode = null;
-        nodeUI.Hide();
+        nodeSelectUI.Hide();
     }
 
     public void SelectTurretToBuild(TurretBlueprint turret)
     {
         turretToBuild = turret;
         selectedNode = null;
-        nodeUI.Hide();
+        nodeSelectUI.Hide();
     }
 }
