@@ -2,15 +2,6 @@
 using UnityEngine.UI;
 using TMPro;
 
-[System.Serializable]
-public class TurretBlueprint
-{
-    public GameObject prefab;
-    public string name;
-    public int cost;
-    public Sprite icon;
-}
-
 public class Shop : MonoBehaviour
 {
     [Header("[ UI Settings ]")]

@@ -1,31 +1,59 @@
 ﻿using UnityEngine;
-using UnityEngine.EventSystems;
+using UnityEngine.UI;
 using TMPro;
 
 public class NodeUI : MonoBehaviour
 {
     private Node target;
+    private Shop shop;
+
     public GameObject nodeSelectObject;
     public GameObject nodeSelectUI;
 
-    //public TMP_Text damageDisplayer;
-    //public TMP_Text radiusDisplayer;
+    public Button upgradeButton;
 
-    public void SetTarget(Node _target)
+    public TMP_Text upgradeCostDisplayer;
+    public TMP_Text sellCostDisplayer;
+
+    public void OpenNodeUI(Node _target)
     {
         target = _target;
         nodeSelectObject.transform.position = target.GetBuildPosition();
-        TurretBase turretBase = target.turret.GetComponent<TurretBase>();
-        //damageDisplayer.text = turretBase.damage.ToString();
-        //radiusDisplayer.text = turretBase.radius.ToString();
+
+
+        if (target.isUpgraded == false)
+        {
+            upgradeCostDisplayer.text = "Upgrade\n<size=-10>$ " + target.turretBlueprint.upgradeCost.ToString() + "</size>";
+            upgradeButton.interactable = true;
+        }
+        else
+        {
+            upgradeCostDisplayer.text = "Upgrade Done\n<size=-10>$ --- </size>";
+            upgradeButton.interactable = false;
+        }
+
+        sellCostDisplayer.text = "Sell\n<size=-10>$ " + target.turretBlueprint.GetSellAmount().ToString() + "</size>";
+
 
         nodeSelectObject.SetActive(true);
         nodeSelectUI.SetActive(true);
     }
 
-    public void Hide()
+    public void CloseNodeUI()
     {
         nodeSelectObject.SetActive(false);
         nodeSelectUI.SetActive(false);
+    }
+
+    public void Upgrade()
+    {
+        target.UpgradeTurret();
+        BuildManager.instance.DeselectNode();
+    }
+
+    public void Sell()
+    {
+        target.SellTurret();
+        BuildManager.instance.DeselectNode();
     }
 }

@@ -14,6 +14,8 @@ public class BuildManager : MonoBehaviour
     }
 
     public GameObject buildEffectPrefab = null;
+    public GameObject sellEffectPrefab = null;
+
     public NodeUI nodeSelectUI;
     public Shop shopUI;
 
@@ -22,28 +24,6 @@ public class BuildManager : MonoBehaviour
 
     public bool CanBuild { get { return turretToBuild != null; } }
     public bool HasMoney { get { return PlayerStats.Money >= turretToBuild.cost; } }
-
-    public void BuildTurretOn(Node node)
-    {
-        if(turretToBuild == null) { return; }
-        if(PlayerStats.Money < turretToBuild.cost)
-        {
-            Debug.Log("돈이 부족합니다.");
-            return;
-        }
-
-        PlayerStats.Money -= turretToBuild.cost;
-
-        GameObject turret = Instantiate(turretToBuild.prefab,
-                            new Vector3(node.transform.position.x, node.transform.position.y + 0.25f, node.transform.position.z),
-                            Quaternion.identity) as GameObject;
-        node.turret = turret;
-
-        GameObject effect = Instantiate(buildEffectPrefab, node.GetBuildPosition(), Quaternion.identity) as GameObject;
-        Destroy(effect, 5f);
-
-        Debug.Log("포탑 건설 성공! 남은 소지금: " + PlayerStats.Money);
-    }
 
     public void SelectNode(Node node)
     {
@@ -56,19 +36,23 @@ public class BuildManager : MonoBehaviour
         shopUI.CloseTurretBuyInfoWin();
         selectedNode = node;
         turretToBuild = null;
-        nodeSelectUI.SetTarget(node);
+        nodeSelectUI.OpenNodeUI(node);
     }
 
     public void DeselectNode()
     {
         selectedNode = null;
-        nodeSelectUI.Hide();
+        nodeSelectUI.CloseNodeUI();
     }
 
     public void SelectTurretToBuild(TurretBlueprint turret)
     {
         turretToBuild = turret;
-        selectedNode = null;
-        nodeSelectUI.Hide();
+        DeselectNode();
+    }
+
+    public TurretBlueprint GetTurretToBuild()
+    {
+        return turretToBuild;
     }
 }

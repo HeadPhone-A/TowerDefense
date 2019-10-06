@@ -58,7 +58,7 @@ MonoBehaviour:
   fireRadiusGizmosColor: {r: 1, g: 0, b: 0, a: 1}
   targetEnemy: {fileID: 0}
   fireRate: 0.3
-  bulletSpeed: 50
+  bulletSpeed: 75
   bulletPrefab: {fileID: 3790210624159860670, guid: c776fe0d3dc117843b22b1a645a014ef,
     type: 3}
   bulletImpactEffect: {fileID: 1000010694419832, guid: 7cb95265de65361409d636b9d9c12ef5,

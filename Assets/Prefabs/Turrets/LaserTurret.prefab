@@ -9601,7 +9601,7 @@ GameObject:
   - component: {fileID: 393706756436072087}
   - component: {fileID: 7527711969934891957}
   m_Layer: 0
-  m_Name: LaserTurret 1
+  m_Name: LaserTurret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9738,11 +9738,12 @@ MonoBehaviour:
   targetLayerMask:
     serializedVersion: 2
     m_Bits: 256
-  damage: 20
+  damage: 25
   radius: 15
   turnSpeed: 10
   fireRadiusGizmos: 1
   fireRadiusGizmosColor: {r: 1, g: 0, b: 0, a: 1}
+  targetEnemy: {fileID: 0}
   laserLineRenderer: {fileID: 393706756436072087}
   laserImpactEffect: {fileID: 5073437268784393776}
   laserSlowPercent: 50
