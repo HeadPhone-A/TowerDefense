@@ -207,9 +207,6 @@
     <Reference Include="Unity.Rider.Editor">
       <HintPath>D:/Users/MYODAN/Documents/Unity/TowerDefense/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.2D.Sprite.Editor">
-      <HintPath>D:/Users/MYODAN/Documents/Unity/TowerDefense/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.TextMeshPro">
       <HintPath>D:/Users/MYODAN/Documents/Unity/TowerDefense/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
