@@ -5,7 +5,7 @@ using TMPro;
 public class NodeUI : MonoBehaviour
 {
     private Node target;
-    private Shop shop;
+    private ShopUI shop;
 
     public GameObject nodeSelectObject;
     public GameObject nodeSelectUI;

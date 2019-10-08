@@ -17,7 +17,17 @@ public class TurretBase : MonoBehaviour
 
     public Enemy targetEnemy;
 
-    public void UpdateTurretRotate()
+    protected virtual void Start()
+    {
+        InvokeRepeating("UpdateTarget", 0f, 0.5f);
+    }
+
+    protected virtual void Update()
+    {
+        UpdateTurretRotate();
+    }
+
+    private void UpdateTurretRotate()
     {
         if (target == null)
         {
@@ -31,7 +41,7 @@ public class TurretBase : MonoBehaviour
         }
     }
 
-    public void UpdateTarget()
+    private void UpdateTarget()
     {
         Collider[] colls = Physics.OverlapSphere(transform.position, radius, targetLayerMask);
         Transform shortestTarget = null;

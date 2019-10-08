@@ -17,7 +17,7 @@ public class BuildManager : MonoBehaviour
     public GameObject sellEffectPrefab = null;
 
     public NodeUI nodeSelectUI;
-    public Shop shopUI;
+    public ShopUI shopUI;
 
     private TurretBlueprint turretToBuild = null;
     private Node selectedNode = null;

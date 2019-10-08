@@ -3,25 +3,27 @@ using UnityEngine.EventSystems;
 
 public class Node : MonoBehaviour
 {
-    private Color defaultColor;
     public Color hoverColor;
     public Color notEnoughMoneyColor;
 
     public Vector3 positionOffset;
 
+    private Color defaultColor;
+
+    private Renderer rend;                  //{ get { return GetComponent<Renderer>(); } }
+    private BuildManager buildManager;      //{ get { return BuildManager.instance; } }
+    private SoundManager soundManager;      //{ get { return SoundManager.instance; } }
+
     [HideInInspector] public GameObject turret;
     [HideInInspector] public TurretBlueprint turretBlueprint;
     [HideInInspector] public bool isUpgraded = false;
 
-    public Renderer rend;
-    private BuildManager buildManager;
-
     private void Start()
     {
         rend = GetComponent<Renderer>();
-        defaultColor = rend.material.color;
-
         buildManager = BuildManager.instance;
+        soundManager = SoundManager.instance;
+        defaultColor = rend.material.color;
     }
 
     public Vector3 GetBuildPosition()
@@ -55,9 +57,12 @@ public class Node : MonoBehaviour
         if (blueprint == null) { return; }
         if (PlayerStats.Money < blueprint.cost)
         {
+            soundManager.PlaySoundEffect("Error");
             Debug.Log("돈이 부족합니다.");
             return;
         }
+
+        soundManager.PlaySoundEffect("ItemPurchase");
 
         PlayerStats.Money -= blueprint.cost;
 
@@ -76,9 +81,12 @@ public class Node : MonoBehaviour
     {
         if (PlayerStats.Money < turretBlueprint.upgradeCost)
         {
+            soundManager.PlaySoundEffect("Error");
             Debug.Log("돈이 부족합니다.");
             return;
         }
+
+        soundManager.PlaySoundEffect("ItemPurchase");
 
         PlayerStats.Money -= turretBlueprint.upgradeCost;
 
@@ -99,6 +107,8 @@ public class Node : MonoBehaviour
 
     public void SellTurret()
     {
+        soundManager.PlaySoundEffect("ItemPurchase");
+
         PlayerStats.Money += turretBlueprint.GetSellAmount();
         Destroy(turret);
 

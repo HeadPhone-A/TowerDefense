@@ -13,14 +13,9 @@ public class RocketTurret : TurretBase
 
     private float currentFireRate;
 
-    private void Start()
+    protected override void Update()
     {
-        InvokeRepeating("UpdateTarget", 0f, 0.5f);
-    }
-
-    private void Update()
-    {
-        UpdateTurretRotate();
+        base.Update();
         if (target != null)
         {
             currentFireRate -= Time.deltaTime;

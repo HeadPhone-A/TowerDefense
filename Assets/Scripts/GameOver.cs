@@ -21,3 +21,4 @@ public class GameOver : MonoBehaviour
         Debug.Log("Go to Title");
     }
 }
+

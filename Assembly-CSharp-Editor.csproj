@@ -62,10 +62,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Imports\Modern UI Pack\Editor\ContextMenu.cs" />
-    <Compile Include="Assets\Imports\Modern UI Pack\Editor\ExtendedColorPicker.cs" />
-    <Compile Include="Assets\Imports\Modern UI Pack\Editor\InitMUIP.cs" />
-    <Compile Include="Assets\Imports\Modern UI Pack\Editor\UIManagerEditor.cs" />
     <Compile Include="Assets\Scripts\Editor\Instant Screenshot\ScreenshotTaker.cs" />
     <Compile Include="Assets\Scripts\Editor\LaserTurretEditor.cs" />
     <Compile Include="Assets\Scripts\Editor\RocketTurretEditor.cs" />
