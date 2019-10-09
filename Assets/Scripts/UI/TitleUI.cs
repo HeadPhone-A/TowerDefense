@@ -1,16 +1,17 @@
 ﻿using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class TitleUI : MonoBehaviour
 {
+    public SceneFader sceneFader;
+
     public void Play()
     {
-        SceneManager.LoadScene("MainScene");
+        sceneFader.FadeTo("MainScene");
     }
 
     public void Continue()
     {
-        SceneManager.LoadScene("MainScene");
+        sceneFader.FadeTo("MainScene");
         Debug.Log("Continue");
     }
 

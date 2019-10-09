@@ -1,9 +1,10 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PauseMenu : MonoBehaviour
+public class PauseMenuUI : MonoBehaviour
 {
     public GameObject pauseMenuUi;
+    public SceneFader sceneFader;
 
     private void Update()
     {
@@ -30,11 +31,12 @@ public class PauseMenu : MonoBehaviour
     public void Retry()
     {
         Toggle();
-        SceneManager.LoadScene("MainScene");
+        sceneFader.FadeTo(SceneManager.GetActiveScene().name);
     }
 
     public void Title()
     {
-        Debug.Log("Go to Title");
+        Toggle();
+        sceneFader.FadeTo("TitleScene");
     }
 }

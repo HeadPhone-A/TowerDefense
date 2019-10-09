@@ -1,11 +1,13 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {
     [Header("[ Enemy Settings ]")]
-    public float health = 100;
-    public float speed = 10f;
-    [HideInInspector] public float currentSpeed = 10f;
+    public float startHealth = 100;
+    public float startSpeed = 10f;
+    [HideInInspector] public float speed;
+    [HideInInspector] public float health;
 
     [Header("[ Loot Settings ]")]
     public int lootMoney = 50;
@@ -13,15 +15,28 @@ public class Enemy : MonoBehaviour
     [Header("[ Effect Settings ]")]
     public GameObject deathEffect;
 
+    [Header("[ Unity Settings ]")]
+    public Image healthBar;
+    private Quaternion starthealthBarRotate;
+
     private void Start()
     {
-        currentSpeed = speed;
+        speed = startSpeed;
+        health = startHealth;
+        starthealthBarRotate = healthBar.transform.rotation;
+    }
+
+    private void Update()
+    {
+        healthBar.transform.parent.transform.parent.rotation = starthealthBarRotate;
+        healthBar.fillAmount = Mathf.Lerp(healthBar.fillAmount, health / startHealth, Time.deltaTime * 10);
     }
 
     public void TakeDamage(float amount)
     {
         health -= amount;
-        if(health <= 0)
+
+        if (health <= 0)
         {
             Die();
         }
@@ -29,7 +44,7 @@ public class Enemy : MonoBehaviour
 
     public void Slow(float pct)
     {
-        currentSpeed = speed * (1f - pct);
+        speed = startSpeed * (1f - pct);
     }
 
     private void Die()

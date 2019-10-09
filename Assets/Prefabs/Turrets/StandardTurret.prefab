@@ -51,7 +51,7 @@ MonoBehaviour:
   targetLayerMask:
     serializedVersion: 2
     m_Bits: 256
-  damage: 5
+  damage: 20
   radius: 10
   turnSpeed: 7.5
   fireRadiusGizmos: 1

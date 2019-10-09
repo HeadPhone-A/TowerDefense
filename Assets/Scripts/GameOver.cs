@@ -5,6 +5,7 @@ using TMPro;
 public class GameOver : MonoBehaviour
 {
     public TMP_Text roundsText;
+    public SceneFader sceneFader;
 
     private void OnEnable()
     {
@@ -13,12 +14,12 @@ public class GameOver : MonoBehaviour
 
     public void Retry()
     {
-        SceneManager.LoadScene("MainScene");
+        sceneFader.FadeTo(SceneManager.GetActiveScene().name);
     }
 
     public void Title()
     {
-        Debug.Log("Go to Title");
+        sceneFader.FadeTo("TitleScene");
     }
 }
 

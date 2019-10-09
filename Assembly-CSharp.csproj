@@ -102,8 +102,8 @@
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\GameOver.cs" />
     <Compile Include="Assets\Scripts\Node.cs" />
-    <Compile Include="Assets\Scripts\PauseMenu.cs" />
     <Compile Include="Assets\Scripts\PlayerStats.cs" />
+    <Compile Include="Assets\Scripts\SceneFader.cs" />
     <Compile Include="Assets\Scripts\SoundManager.cs" />
     <Compile Include="Assets\Scripts\Turrets\LaserTurret.cs" />
     <Compile Include="Assets\Scripts\Turrets\RocketBullet.cs" />
@@ -116,6 +116,7 @@
     <Compile Include="Assets\Scripts\UI\MenuUI.cs" />
     <Compile Include="Assets\Scripts\UI\MoneyUI.cs" />
     <Compile Include="Assets\Scripts\UI\NodeUI.cs" />
+    <Compile Include="Assets\Scripts\UI\PauseMenuUI.cs" />
     <Compile Include="Assets\Scripts\UI\ShopUI.cs" />
     <Compile Include="Assets\Scripts\UI\TitleUI.cs" />
     <Compile Include="Assets\Scripts\WaveSpawner.cs" />

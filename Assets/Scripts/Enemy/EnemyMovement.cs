@@ -17,16 +17,16 @@ public class EnemyMovement : MonoBehaviour
     private void Update()
     {
         Vector3 dir = target.position - transform.position;
-        transform.Translate(dir.normalized * enemy.currentSpeed * Time.deltaTime, Space.World);
+        transform.Translate(dir.normalized * enemy.speed * Time.deltaTime, Space.World);
         Quaternion newRotate = Quaternion.LookRotation(dir.normalized);
-        transform.rotation = Quaternion.Slerp(transform.rotation, newRotate, enemy.currentSpeed * Time.deltaTime);
+        transform.rotation = Quaternion.Slerp(transform.rotation, newRotate, enemy.speed * Time.deltaTime);
 
         if (Vector3.Distance(transform.position, target.position) <= 0.2f)
         {
             GetNextWaypoint();
         }
 
-        enemy.currentSpeed = enemy.speed;
+        enemy.speed = enemy.startSpeed;
     }
 
     private void GetNextWaypoint()
