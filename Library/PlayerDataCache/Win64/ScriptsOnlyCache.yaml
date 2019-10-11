@@ -9,56 +9,25 @@ ScriptsOnlyBuild:
     - GameOver
     - LaserTurret
     - LivesUI
-    - Menu
-    - Michsky.UI.ModernUIPack.AnimatedIconHandler
-    - Michsky.UI.ModernUIPack.CustomDropdown
-    - Michsky.UI.ModernUIPack.CustomInputField
-    - Michsky.UI.ModernUIPack.DropdownMultiSelect
-    - Michsky.UI.ModernUIPack.HorizontalSelector
-    - Michsky.UI.ModernUIPack.LayoutGroupPositionFix
-    - Michsky.UI.ModernUIPack.ModalWindowManager
-    - Michsky.UI.ModernUIPack.ModalWindowTabs
-    - Michsky.UI.ModernUIPack.NotificationManager
-    - Michsky.UI.ModernUIPack.PBFilled
-    - Michsky.UI.ModernUIPack.ProgressBar
-    - Michsky.UI.ModernUIPack.RadialSlider
-    - Michsky.UI.ModernUIPack.RangeMaxSlider
-    - Michsky.UI.ModernUIPack.RangeMinSlider
-    - Michsky.UI.ModernUIPack.RangeSlider
-    - Michsky.UI.ModernUIPack.SliderManager
-    - Michsky.UI.ModernUIPack.SwitchManager
-    - Michsky.UI.ModernUIPack.ToggleAnim
-    - Michsky.UI.ModernUIPack.TooltipManager
-    - Michsky.UI.ModernUIPack.UIManager
-    - Michsky.UI.ModernUIPack.UIManagerAnimatedIcon
-    - Michsky.UI.ModernUIPack.UIManagerButton
-    - Michsky.UI.ModernUIPack.UIManagerDropdown
-    - Michsky.UI.ModernUIPack.UIManagerHSelector
-    - Michsky.UI.ModernUIPack.UIManagerInputField
-    - Michsky.UI.ModernUIPack.UIManagerModalWindow
-    - Michsky.UI.ModernUIPack.UIManagerNotification
-    - Michsky.UI.ModernUIPack.UIManagerProgressBar
-    - Michsky.UI.ModernUIPack.UIManagerProgressBarLoop
-    - Michsky.UI.ModernUIPack.UIManagerScrollbar
-    - Michsky.UI.ModernUIPack.UIManagerSlider
-    - Michsky.UI.ModernUIPack.UIManagerSwitch
-    - Michsky.UI.ModernUIPack.UIManagerToggle
+    - MenuUI
     - MoneyUI
     - Node
     - NodeUI
+    - PauseMenuUI
     - PlayerStats
     - RocketBullet
     - RocketTurret
-    - Shop
+    - SceneFader
+    - ShopUI
+    - SoundManager
     - StandardBullet
     - StandardTurret
-    - UnityEngine.UI.Michsky.UI.ModernUIPack.UIGradient
+    - TitleUI
     - WaveSpawner
     - Waypoints
     Unity.TextMeshPro.dll:
     - TMPro.TMP_ColorGradient
     - TMPro.TMP_FontAsset
-    - TMPro.TMP_InputField
     - TMPro.TMP_Settings
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
@@ -75,7 +44,6 @@ ScriptsOnlyBuild:
     - UnityEditor.TestTools.TestRunner.TestListCacheData
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
-    - UnityEngine.EventSystems.EventTrigger
     - UnityEngine.EventSystems.StandaloneInputModule
     - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
@@ -83,11 +51,8 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.HorizontalLayoutGroup
     - UnityEngine.UI.Image
-    - UnityEngine.UI.LayoutElement
     - UnityEngine.UI.Mask
     - UnityEngine.UI.ScrollRect
-    - UnityEngine.UI.Scrollbar
-    - UnityEngine.UI.Slider
     - UnityEngine.UI.Toggle
     - UnityEngine.UI.ToggleGroup
     - UnityEngine.UI.VerticalLayoutGroup
@@ -111,13 +76,15 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
-    - Class: 49
-      Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
     - Class: 74
       Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
       Script: {instanceID: 0}
     - Class: 89
       Script: {instanceID: 0}
@@ -129,166 +96,84 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 108
       Script: {instanceID: 0}
-    - Class: 109
-      Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9686}
-    - Class: 114
-      Script: {instanceID: 9688}
-    - Class: 114
-      Script: {instanceID: 9722}
-    - Class: 114
-      Script: {instanceID: 9786}
+      Script: {instanceID: 9690}
     - Class: 114
       Script: {instanceID: 9790}
     - Class: 114
-      Script: {instanceID: 9806}
+      Script: {instanceID: 9884}
     - Class: 114
-      Script: {instanceID: 9838}
+      Script: {instanceID: 9982}
     - Class: 114
-      Script: {instanceID: 9864}
+      Script: {instanceID: 10084}
     - Class: 114
-      Script: {instanceID: 9866}
+      Script: {instanceID: 10094}
     - Class: 114
-      Script: {instanceID: 9906}
+      Script: {instanceID: 10150}
     - Class: 114
-      Script: {instanceID: 9928}
+      Script: {instanceID: 10170}
     - Class: 114
-      Script: {instanceID: 9954}
+      Script: {instanceID: 10220}
     - Class: 114
-      Script: {instanceID: 9998}
+      Script: {instanceID: 10260}
     - Class: 114
-      Script: {instanceID: 10008}
+      Script: {instanceID: 10360}
     - Class: 114
-      Script: {instanceID: 10016}
-    - Class: 114
-      Script: {instanceID: 10028}
-    - Class: 114
-      Script: {instanceID: 10044}
-    - Class: 114
-      Script: {instanceID: 10046}
-    - Class: 114
-      Script: {instanceID: 10122}
-    - Class: 114
-      Script: {instanceID: 10132}
-    - Class: 114
-      Script: {instanceID: 10190}
-    - Class: 114
-      Script: {instanceID: 10210}
-    - Class: 114
-      Script: {instanceID: 10264}
-    - Class: 114
-      Script: {instanceID: 10306}
-    - Class: 114
-      Script: {instanceID: 10328}
+      Script: {instanceID: 10366}
     - Class: 114
       Script: {instanceID: 10374}
     - Class: 114
-      Script: {instanceID: 10398}
+      Script: {instanceID: 10436}
     - Class: 114
-      Script: {instanceID: 10402}
+      Script: {instanceID: 10454}
     - Class: 114
-      Script: {instanceID: 10416}
+      Script: {instanceID: 10498}
     - Class: 114
-      Script: {instanceID: 10422}
+      Script: {instanceID: 10516}
     - Class: 114
-      Script: {instanceID: 10434}
+      Script: {instanceID: 10606}
     - Class: 114
-      Script: {instanceID: 10450}
+      Script: {instanceID: 10622}
     - Class: 114
-      Script: {instanceID: 10500}
+      Script: {instanceID: 10708}
     - Class: 114
-      Script: {instanceID: 10502}
+      Script: {instanceID: 10714}
     - Class: 114
-      Script: {instanceID: 10534}
+      Script: {instanceID: 10750}
     - Class: 114
-      Script: {instanceID: 10568}
+      Script: {instanceID: 10778}
     - Class: 114
-      Script: {instanceID: 10578}
+      Script: {instanceID: 10794}
     - Class: 114
-      Script: {instanceID: 10580}
+      Script: {instanceID: 10840}
     - Class: 114
-      Script: {instanceID: 10590}
+      Script: {instanceID: 10844}
     - Class: 114
-      Script: {instanceID: 10596}
+      Script: {instanceID: 10916}
     - Class: 114
-      Script: {instanceID: 10688}
+      Script: {instanceID: 11004}
     - Class: 114
-      Script: {instanceID: 10704}
+      Script: {instanceID: 11022}
     - Class: 114
-      Script: {instanceID: 10748}
+      Script: {instanceID: 11038}
     - Class: 114
-      Script: {instanceID: 10764}
+      Script: {instanceID: 11100}
     - Class: 114
-      Script: {instanceID: 10798}
+      Script: {instanceID: 11164}
     - Class: 114
-      Script: {instanceID: 10804}
+      Script: {instanceID: 11350}
     - Class: 114
-      Script: {instanceID: 10806}
+      Script: {instanceID: 11408}
     - Class: 114
-      Script: {instanceID: 10868}
+      Script: {instanceID: 11424}
     - Class: 114
-      Script: {instanceID: 10886}
+      Script: {instanceID: 11478}
     - Class: 114
-      Script: {instanceID: 10888}
+      Script: {instanceID: 11492}
     - Class: 114
-      Script: {instanceID: 10936}
+      Script: {instanceID: 11498}
     - Class: 114
-      Script: {instanceID: 10940}
-    - Class: 114
-      Script: {instanceID: 10954}
-    - Class: 114
-      Script: {instanceID: 11010}
-    - Class: 114
-      Script: {instanceID: 11018}
-    - Class: 114
-      Script: {instanceID: 11062}
-    - Class: 114
-      Script: {instanceID: 11064}
-    - Class: 114
-      Script: {instanceID: 11090}
-    - Class: 114
-      Script: {instanceID: 11116}
-    - Class: 114
-      Script: {instanceID: 11136}
-    - Class: 114
-      Script: {instanceID: 11156}
-    - Class: 114
-      Script: {instanceID: 11218}
-    - Class: 114
-      Script: {instanceID: 11284}
-    - Class: 114
-      Script: {instanceID: 11308}
-    - Class: 114
-      Script: {instanceID: 11398}
-    - Class: 114
-      Script: {instanceID: 11446}
-    - Class: 114
-      Script: {instanceID: 11484}
-    - Class: 114
-      Script: {instanceID: 11518}
-    - Class: 114
-      Script: {instanceID: 11534}
-    - Class: 114
-      Script: {instanceID: 11550}
-    - Class: 114
-      Script: {instanceID: 11566}
-    - Class: 114
-      Script: {instanceID: 11570}
-    - Class: 114
-      Script: {instanceID: 11580}
-    - Class: 114
-      Script: {instanceID: 11594}
-    - Class: 114
-      Script: {instanceID: 11628}
-    - Class: 114
-      Script: {instanceID: 11642}
-    - Class: 114
-      Script: {instanceID: 11660}
-    - Class: 114
-      Script: {instanceID: 11678}
-    - Class: 114
-      Script: {instanceID: 11680}
+      Script: {instanceID: 11528}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -317,6 +202,93 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 258
       Script: {instanceID: 0}
+    Assets/Scenes/TitleScene.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 23
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 33
+      Script: {instanceID: 0}
+    - Class: 43
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 49
+      Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 109
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 9690}
+    - Class: 114
+      Script: {instanceID: 9712}
+    - Class: 114
+      Script: {instanceID: 9884}
+    - Class: 114
+      Script: {instanceID: 10094}
+    - Class: 114
+      Script: {instanceID: 10260}
+    - Class: 114
+      Script: {instanceID: 10282}
+    - Class: 114
+      Script: {instanceID: 10454}
+    - Class: 114
+      Script: {instanceID: 10622}
+    - Class: 114
+      Script: {instanceID: 10844}
+    - Class: 114
+      Script: {instanceID: 10858}
+    - Class: 114
+      Script: {instanceID: 11038}
+    - Class: 114
+      Script: {instanceID: 11100}
+    - Class: 114
+      Script: {instanceID: 11266}
+    - Class: 114
+      Script: {instanceID: 11382}
+    - Class: 114
+      Script: {instanceID: 11424}
+    - Class: 114
+      Script: {instanceID: 11478}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 212
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    - Class: 258
+      Script: {instanceID: 0}
   scriptHashData:
   - hash:
       serializedVersion: 2
@@ -326,34 +298,16 @@ ScriptsOnlyBuild:
     className: CanvasScaler
   - hash:
       serializedVersion: 2
-      Hash: 63889984bc994e4168cd8d474b2f019d
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Michsky.UI.ModernUIPack
-    className: ModalWindowTabs
-  - hash:
-      serializedVersion: 2
       Hash: 984dcc0ba3707b7691fbdca8ff508d28
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SelectionCaret
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 6164dcc6f18fa564d21324496cc9812f
     assemblyName: Assembly-CSharp.dll
-    namespaceName: Michsky.UI.ModernUIPack
-    className: UIManagerProgressBarLoopEditor
-  - hash:
-      serializedVersion: 2
-      Hash: 20af7e083414a32304174f69af002363
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Michsky.UI.ModernUIPack
-    className: UIManagerButton
-  - hash:
-      serializedVersion: 2
-      Hash: e87e4a4b53652e3121c1de39d982a768
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Michsky.UI.ModernUIPack
-    className: LaunchURL
+    namespaceName: 
+    className: TitleUI
   - hash:
       serializedVersion: 2
       Hash: 87ff43d2baf3385cba327d8f803a4ebb
@@ -368,37 +322,13 @@ ScriptsOnlyBuild:
     className: TMP_Dropdown
   - hash:
       serializedVersion: 2
-      Hash: 0b760eb7c486d4d51766862c26cc01ef
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Michsky.UI.ModernUIPack
-    className: UIManagerTooltip
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Michsky.UI.ModernUIPack
-    className: DemoTopButton
-  - hash:
-      serializedVersion: 2
-      Hash: 2d3a6294a05b1f2fa2815f9e7b1e1fd7
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Michsky.UI.ModernUIPack
-    className: ProgressBar
-  - hash:
-      serializedVersion: 2
-      Hash: d53a0f2640b8100ffb4404334930d028
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Michsky.UI.ModernUIPack
-    className: UIManagerHSelector
-  - hash:
-      serializedVersion: 2
       Hash: e7a73f5f78ba6445195ec23b74a1ce2d
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_ScrollbarEventHandler
   - hash:
       serializedVersion: 2
-      Hash: f6da6900091332a243193eecc20a74f9
+      Hash: b9e639cb087d71c3c7340a374f8c8921
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: WaveSpawner
@@ -408,12 +338,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: GroupTrack
-  - hash:
-      serializedVersion: 2
-      Hash: 8f47acb6b7628a216b7abe1126ba672f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Michsky.UI.ModernUIPack
-    className: CustomDropdown
   - hash:
       serializedVersion: 2
       Hash: a5781dc71a671b1ad2b38de19f24b71f
@@ -426,12 +350,6 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Text
-  - hash:
-      serializedVersion: 2
-      Hash: b9f6fc307bf8c57490d5a924365ea244
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Michsky.UI.ModernUIPack
-    className: UIManagerSwitch
   - hash:
       serializedVersion: 2
       Hash: 06a330481ec400be50745bb7faf76bd0
@@ -476,22 +394,10 @@ ScriptsOnlyBuild:
     className: TMP_InputField
   - hash:
       serializedVersion: 2
-      Hash: 706d0833e2d1e96b419b95aa0a129c40
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Michsky.UI.ModernUIPack
-    className: TooltipManager
-  - hash:
-      serializedVersion: 2
       Hash: 7ab0e790220bdca831fdd886b339039d
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: GridLayoutGroup
-  - hash:
-      serializedVersion: 2
-      Hash: a852408a86aa373da4d3320c482b2947
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Michsky.UI.ModernUIPack
-    className: UIManagerProgressBar
   - hash:
       serializedVersion: 2
       Hash: 8aa3d6ccbcb54ee8db6c1229854adaaa
@@ -506,12 +412,6 @@ ScriptsOnlyBuild:
     className: SignalAsset
   - hash:
       serializedVersion: 2
-      Hash: 846f9515ef7d1e03cad8bbeb99553ea2
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Michsky.UI.ModernUIPack
-    className: DropdownMultiSelect
-  - hash:
-      serializedVersion: 2
       Hash: 0dbc3be398b4869a5c8d0d8481ee402c
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -522,24 +422,6 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: PhysicsRaycaster
-  - hash:
-      serializedVersion: 2
-      Hash: a4f9cb4c1d9496b0b524222c0d3ebade
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Michsky.UI.ModernUIPack
-    className: HorizontalSelector
-  - hash:
-      serializedVersion: 2
-      Hash: 7ab46fb06ef0673bee82c783ea6dd285
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Michsky.UI.ModernUIPack
-    className: UIManagerNotification
-  - hash:
-      serializedVersion: 2
-      Hash: 6c3f57d7d22fd18a86735fbd7f7116fd
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Michsky.UI.ModernUIPack
-    className: DemoManager
   - hash:
       serializedVersion: 2
       Hash: bd3cf68c8964d3c66d1c43f4f98508c9
@@ -602,10 +484,10 @@ ScriptsOnlyBuild:
     className: Benchmark03
   - hash:
       serializedVersion: 2
-      Hash: abe2034b3fb75f1ef924a4610dd79da2
+      Hash: 1e39eddd4d6bd58231fe7c24c329c3dd
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: Shop
+    className: ShopUI
   - hash:
       serializedVersion: 2
       Hash: e6f0efd0e20669d577e9d21526b3d3f9
@@ -662,31 +544,7 @@ ScriptsOnlyBuild:
     className: Benchmark01
   - hash:
       serializedVersion: 2
-      Hash: 9d3997386a4718b31c802c7b5ba9bf1b
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Michsky.UI.ModernUIPack
-    className: UIManagerSlider
-  - hash:
-      serializedVersion: 2
-      Hash: 48065ce3dbe07a066dbc8f020ccbb6e8
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Michsky.UI.ModernUIPack
-    className: UIManagerScrollbar
-  - hash:
-      serializedVersion: 2
-      Hash: 873bfdec377a1a60e24ebfe71ee1f604
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Michsky.UI.ModernUIPack
-    className: RangeMaxSlider
-  - hash:
-      serializedVersion: 2
-      Hash: 726ab9c948eb63ef4e6ae80cc272ef1d
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Michsky.UI.ModernUIPack
-    className: DemoTopListShadow
-  - hash:
-      serializedVersion: 2
-      Hash: 2b6bb51e443d8923af9b46bf0d057acd
+      Hash: 0f4c5c94f2284f4d88caed17be62c259
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Node
@@ -704,12 +562,6 @@ ScriptsOnlyBuild:
     className: RocketBullet
   - hash:
       serializedVersion: 2
-      Hash: e12f889159a1df4f7fb0a7b26c33ee3a
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: UnityEngine.UI.Michsky.UI.ModernUIPack
-    className: UIGradient
-  - hash:
-      serializedVersion: 2
       Hash: c597bc78b95fc79bcd2396cf61a5cb41
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -722,34 +574,22 @@ ScriptsOnlyBuild:
     className: TMP_Asset
   - hash:
       serializedVersion: 2
-      Hash: 692d6bef9ae10d87a1b64c07cbe0dc58
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Michsky.UI.ModernUIPack
-    className: UIManagerToggle
-  - hash:
-      serializedVersion: 2
       Hash: 97ace6213ad0f149b0917a4c669c6ca3
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: ScrollRect
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 6ade5163953e768d48c226e56863f89e
     assemblyName: Assembly-CSharp.dll
-    namespaceName: Michsky.UI.ModernUIPack
-    className: UIManagerButtonEditor
+    namespaceName: 
+    className: SceneFader
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: SignalTrack
-  - hash:
-      serializedVersion: 2
-      Hash: 3b47e85014c5e084d680b285d8779d7d
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Michsky.UI.ModernUIPack
-    className: CustomInputField
   - hash:
       serializedVersion: 2
       Hash: 3375c3d749f8f4cad889721b431bdc27
@@ -770,18 +610,6 @@ ScriptsOnlyBuild:
     className: StandardBullet
   - hash:
       serializedVersion: 2
-      Hash: e15a7dc0c399e994ed774d7a59ddabab
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Michsky.UI.ModernUIPack
-    className: RangeSlider
-  - hash:
-      serializedVersion: 2
-      Hash: 184da8d5bcd1778d7bf23230062221cf
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Michsky.UI.ModernUIPack
-    className: SwitchManager
-  - hash:
-      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -792,18 +620,6 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: EnemyMovement
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Michsky.UI.ModernUIPack
-    className: LayoutGroupPositionFix
-  - hash:
-      serializedVersion: 2
-      Hash: a042b69f38033a10d3dcacd405fe06d1
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Michsky.UI.ModernUIPack
-    className: TooltipContent
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -842,18 +658,6 @@ ScriptsOnlyBuild:
     className: RawImage
   - hash:
       serializedVersion: 2
-      Hash: e8563ff29fe8c5e0cce07227288893b0
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Michsky.UI.ModernUIPack
-    className: RangeMinSlider
-  - hash:
-      serializedVersion: 2
-      Hash: 063e5238d65060f6ac28f6158bab3397
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Michsky.UI.ModernUIPack
-    className: PBFilled
-  - hash:
-      serializedVersion: 2
       Hash: e244702e0dc05782229aa524e4d757f5
     assemblyName: Assembly-CSharp.dll
     namespaceName: TMPro.Examples
@@ -869,25 +673,19 @@ ScriptsOnlyBuild:
       Hash: 49fd81fd20d25b590f27b215e06dee1a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: Menu
+    className: MenuUI
   - hash:
       serializedVersion: 2
-      Hash: 0c0fc931324e8f4d770c367a3fb22878
+      Hash: 2e0c4f63ed46c33482a95e3ecf80d5f1
     assemblyName: Assembly-CSharp.dll
-    namespaceName: Michsky.UI.ModernUIPack
-    className: UIManagerProgressBarLoop
+    namespaceName: 
+    className: SoundManager
   - hash:
       serializedVersion: 2
       Hash: bad74c691108369ffa086498fba095c5
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: LivesUI
-  - hash:
-      serializedVersion: 2
-      Hash: be0af4b142f25976c86938456009673d
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Michsky.UI.ModernUIPack
-    className: UIManagerDropdown
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -968,13 +766,7 @@ ScriptsOnlyBuild:
     className: TMP_TextSelector_A
   - hash:
       serializedVersion: 2
-      Hash: a14baf2a1cb11782e81a65254c08e1a2
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Michsky.UI.ModernUIPack
-    className: AnimatedIconHandler
-  - hash:
-      serializedVersion: 2
-      Hash: f01a572abe3493fa18f601fa5dd5f74b
+      Hash: 8f0649cdd49d6692c7f9e17c3831862a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Enemy
@@ -992,28 +784,10 @@ ScriptsOnlyBuild:
     className: SimpleScript
   - hash:
       serializedVersion: 2
-      Hash: 6f98b8950808beacdfabd2056ae8322c
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Michsky.UI.ModernUIPack
-    className: SliderManager
-  - hash:
-      serializedVersion: 2
-      Hash: b0c289424e1aa7e512712a421384e20b
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Michsky.UI.ModernUIPack
-    className: UIManager
-  - hash:
-      serializedVersion: 2
       Hash: 274152c972478468d8321a977bbca8e3
     assemblyName: Assembly-CSharp.dll
     namespaceName: TMPro.Examples
     className: TMP_TextInfoDebugTool
-  - hash:
-      serializedVersion: 2
-      Hash: d35acf88626ca55f005c18eabdcb1418
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Michsky.UI.ModernUIPack
-    className: UIManagerInputField
   - hash:
       serializedVersion: 2
       Hash: bd3f0ca738703903e759f77536ed74fd
@@ -1082,12 +856,6 @@ ScriptsOnlyBuild:
     className: BeforeAfterTestCommandState
   - hash:
       serializedVersion: 2
-      Hash: b4283fb47bfb74b0356ceab47567b304
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Michsky.UI.ModernUIPack
-    className: DemoScrollManager
-  - hash:
-      serializedVersion: 2
       Hash: 4d16cfbaa8e821a2b370e80844a0e9bc
     assemblyName: Assembly-CSharp.dll
     namespaceName: TMPro.Examples
@@ -1100,7 +868,7 @@ ScriptsOnlyBuild:
     className: VertexShakeB
   - hash:
       serializedVersion: 2
-      Hash: 01c59249ae32362a6d7cd71a348f0894
+      Hash: 030f867bd858213fc5839cfa53a172ca
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameOver
@@ -1110,12 +878,6 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: TMPro.Examples
     className: Benchmark02
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Michsky.UI.ModernUIPack
-    className: ModalWindowManager
   - hash:
       serializedVersion: 2
       Hash: bd3f0ca738703903e759f77536ed74fd
@@ -1154,13 +916,7 @@ ScriptsOnlyBuild:
     className: TMPro_InstructionOverlay
   - hash:
       serializedVersion: 2
-      Hash: f310a46eb879fe7d0f3af3eedd11b7a7
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Michsky.UI.ModernUIPack
-    className: UIManagerModalWindow
-  - hash:
-      serializedVersion: 2
-      Hash: 6b83ef4a385c4df5d7e4b636d341911f
+      Hash: b7ec48ce2dc1ca16c361322af7250ad0
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: BuildManager
@@ -1184,12 +940,6 @@ ScriptsOnlyBuild:
     className: TextMeshPro
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Michsky.UI.ModernUIPack
-    className: UIElementInFront
-  - hash:
-      serializedVersion: 2
       Hash: 3165968ba45c74472d279ba04455fccb
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -1200,12 +950,6 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: TMPro.Examples
     className: VertexShakeA
-  - hash:
-      serializedVersion: 2
-      Hash: a2a190537bd48bfaa94460b49f94e12f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Michsky.UI.ModernUIPack
-    className: UIManagerAnimatedIcon
   - hash:
       serializedVersion: 2
       Hash: 8b1fe5dfdcf943fb3b72506b9f19335f
@@ -1220,13 +964,7 @@ ScriptsOnlyBuild:
     className: PlayModeRunnerCallback
   - hash:
       serializedVersion: 2
-      Hash: e5bba379f24f3160d824b67ca7e4f5fc
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Michsky.UI.ModernUIPack
-    className: DemoScrollForMore
-  - hash:
-      serializedVersion: 2
-      Hash: cdc0ade010e93f6ca46f78472ca83672
+      Hash: b0342e7bc2750e01d3fe837ee5ae7643
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: NodeUI
@@ -1236,12 +974,6 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: BaseInput
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Michsky.UI.ModernUIPack
-    className: ToggleAnim
   - hash:
       serializedVersion: 2
       Hash: 914da817eb9ca5a20145fc7ecd0bb060
@@ -1256,12 +988,6 @@ ScriptsOnlyBuild:
     className: Outline
   - hash:
       serializedVersion: 2
-      Hash: f329472bb32de43d2418275633dc22bb
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Michsky.UI.ModernUIPack
-    className: RadialSlider
-  - hash:
-      serializedVersion: 2
       Hash: 3f52d34ea17dfc771004b80f5d492445
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
@@ -1272,12 +998,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SubMesh
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Michsky.UI.ModernUIPack
-    className: UIManagerSliderEditor
   - hash:
       serializedVersion: 2
       Hash: 7090bc1e5ccaec2a9d0d1335ed8cee99
@@ -1310,6 +1030,12 @@ ScriptsOnlyBuild:
     className: SignalEmitter
   - hash:
       serializedVersion: 2
+      Hash: 2dc195c3f465bf9cb24c9d2ce6a0a0f2
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PauseMenuUI
+  - hash:
+      serializedVersion: 2
       Hash: 85c97bcc5f84eeb0999d75902803b99d
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -1322,17 +1048,12 @@ ScriptsOnlyBuild:
     className: ToggleGroup
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Michsky.UI.ModernUIPack
-    className: NotificationManager
-  - hash:
-      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
   platform: 19
   scenePathNames:
+  - Assets/Scenes/TitleScene.unity
   - Assets/Scenes/MainScene.unity
-  playerPath: D:/Users/MYODAN/Documents/Unity/TowerDefense/Builds/TowerDefense.exe
+  playerPath: D:/Users/MYODAN/Desktop/Build/TowerDefense.exe

@@ -3,10 +3,12 @@
 public class MenuUI : MonoBehaviour
 {
     public GameObject shop;
+    public NodeUI nodeUI;
 
     public void OpenShop()
     {
         SoundManager.instance.PlaySoundEffect("Click");
+        nodeUI.CloseNodeUI();
         shop.SetActive(true);
     }
 

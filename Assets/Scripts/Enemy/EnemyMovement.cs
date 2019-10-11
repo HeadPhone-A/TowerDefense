@@ -7,11 +7,13 @@ public class EnemyMovement : MonoBehaviour
     private int waypointIndex = 0;
 
     private Enemy enemy = null;
+    private WaveSpawner waveSpawner;
 
     private void Start()
     {
         target = Waypoints.points[0];
         enemy = GetComponent<Enemy>();
+        waveSpawner = FindObjectOfType<WaveSpawner>().GetComponent<WaveSpawner>();
     }
 
     private void Update()
@@ -44,6 +46,7 @@ public class EnemyMovement : MonoBehaviour
     private void EndPath()
     {
         PlayerStats.Lives--;
+        WaveSpawner.EnemiesAlive--;
         Destroy(gameObject);
     }
 }

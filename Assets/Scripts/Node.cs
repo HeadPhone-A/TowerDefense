@@ -13,6 +13,7 @@ public class Node : MonoBehaviour
     private Renderer rend;                  //{ get { return GetComponent<Renderer>(); } }
     private BuildManager buildManager;      //{ get { return BuildManager.instance; } }
     private SoundManager soundManager;      //{ get { return SoundManager.instance; } }
+    private GameObject shopUI;
 
     [HideInInspector] public GameObject turret;
     [HideInInspector] public TurretBlueprint turretBlueprint;
@@ -24,6 +25,7 @@ public class Node : MonoBehaviour
         buildManager = BuildManager.instance;
         soundManager = SoundManager.instance;
         defaultColor = rend.material.color;
+        shopUI = GameObject.Find("UI").transform.Find("Shop_UI").gameObject;
     }
 
     public Vector3 GetBuildPosition()
@@ -40,6 +42,10 @@ public class Node : MonoBehaviour
 
         if(turret != null)
         {
+            if (shopUI.activeSelf)
+            {
+                return;
+            }
             buildManager.SelectNode(this);
             return;
         }

@@ -4,45 +4,84 @@ using TMPro;
 
 public class WaveSpawner : MonoBehaviour
 {
-    public GameObject enemyPrefabs;
-    public GameObject spawnPoint;
+    public static int EnemiesAlive = 0;
 
-    public TextMeshProUGUI waveCountdownText;
+    public GameObject spawnPoint;
+    //public TMP_Text waveDisplayer;
+    public TMP_Text waveCountdownDisplayer;
+    //public TMP_Text enemyAliveDisplayer;
 
     public float timeBetweenWaves = 5f;
 
+    public Wave[] waves;
+
     private float countdown = 2f;
 
-    private int waveNumber = 0;
+    private int waveIndex = 0;
 
     private void Update()
     {
-        if(countdown <= 0f)
+
+        if (EnemiesAlive > 0)
         {
-            StartCoroutine(SpawnWave());
             countdown = timeBetweenWaves;
+            UpdateWaveCountdownDisplayer();
+            return;
+        }
+
+        if (countdown <= 0f)
+        {
+            countdown = timeBetweenWaves;
+            StartCoroutine(SpawnWave());
+            return;
         }
 
         countdown -= Time.deltaTime;
-
-        countdown = Mathf.Clamp(countdown, 0f, Mathf.Infinity);
-        waveCountdownText.text = string.Format("{0:0.00}", countdown);
+        UpdateWaveCountdownDisplayer();
     }
 
     IEnumerator SpawnWave()
     {
-        waveNumber++;
         PlayerStats.Rounds++;
-        for (int i = 0; i < waveNumber; i++)
+        Wave wave = waves[waveIndex];
+
+        if(wave.enemyLists.Length >= waveIndex)
         {
-            SpawnEnemy();
-            yield return new WaitForSeconds(0.5f);
+            for (int i = 0; i < wave.enemyLists.Length; i++)
+            {
+                for (int j = 0; j < wave.enemyLists[i].spawnCount; j++)
+                {
+                    Debug.Log(i.ToString() + ", " + j.ToString());
+                    if(i == 0 && j == 0)
+                    {
+                        SpawnEnemy(wave.enemyLists[i].enemyPrefab);
+                        continue;
+                    }
+                    yield return new WaitForSeconds(wave.enemyLists[i].spawnRate);
+                    SpawnEnemy(wave.enemyLists[i].enemyPrefab);
+                }
+            }
+        }
+
+        waveIndex++;
+
+        if(waveIndex == waves.Length && EnemiesAlive == 0)
+        {
+            Debug.Log("Wave Won!");
+            this.enabled = false;
         }
     }
 
-    private void SpawnEnemy()
+    private void SpawnEnemy(GameObject enemyPrefab)
     {
-        GameObject enemy = (GameObject)Instantiate(enemyPrefabs, spawnPoint.transform.position, Quaternion.identity);
+        GameObject enemy = (GameObject)Instantiate(enemyPrefab, spawnPoint.transform.position, Quaternion.identity);
         enemy.transform.parent = gameObject.transform;
+        EnemiesAlive++;
+    }
+
+    public void UpdateWaveCountdownDisplayer()
+    {
+        countdown = Mathf.Clamp(countdown, 0f, Mathf.Infinity);
+        waveCountdownDisplayer.text = string.Format("{0:0.00}", countdown);
     }
 }

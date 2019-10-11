@@ -19,11 +19,14 @@ public class Enemy : MonoBehaviour
     public Image healthBar;
     private Quaternion starthealthBarRotate;
 
+    private WaveSpawner waveSpawner;
+
     private void Start()
     {
         speed = startSpeed;
         health = startHealth;
         starthealthBarRotate = healthBar.transform.rotation;
+        waveSpawner = FindObjectOfType<WaveSpawner>().GetComponent<WaveSpawner>();
     }
 
     private void Update()
@@ -52,6 +55,7 @@ public class Enemy : MonoBehaviour
         PlayerStats.Money += lootMoney;
         GameObject effect = (GameObject)Instantiate(deathEffect, transform.position, Quaternion.identity);
         Destroy(effect, 5f);
+        WaveSpawner.EnemiesAlive--;
         Destroy(gameObject);
     }
 }
