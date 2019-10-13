@@ -26,7 +26,7 @@ public class Enemy : MonoBehaviour
         speed = startSpeed;
         health = startHealth;
         starthealthBarRotate = healthBar.transform.rotation;
-        waveSpawner = FindObjectOfType<WaveSpawner>().GetComponent<WaveSpawner>();
+        waveSpawner = GameObject.Find("GameManager").GetComponent<WaveSpawner>();
     }
 
     private void Update()

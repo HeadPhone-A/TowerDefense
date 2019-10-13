@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1675696066428178736}
   - component: {fileID: 7995572885724656923}
   m_Layer: 8
-  m_Name: Enemy 1
+  m_Name: EnemyHavey
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -139,7 +139,7 @@ GameObject:
   - component: {fileID: 612161067787044654}
   - component: {fileID: 3705981332674300637}
   - component: {fileID: 4295803766387933576}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: HealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -237,7 +237,7 @@ GameObject:
   - component: {fileID: 6603977579735750018}
   - component: {fileID: 7622498033941291865}
   - component: {fileID: 6829101063096316226}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: HealthBarBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -313,7 +313,7 @@ GameObject:
   - component: {fileID: 5538733163899890862}
   - component: {fileID: 4366318302786306540}
   - component: {fileID: 4472081941056047685}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: CurrentHP
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -43,40 +43,24 @@ public class WaveSpawner : MonoBehaviour
     IEnumerator SpawnWave()
     {
         PlayerStats.Rounds++;
+
         Wave wave = waves[waveIndex];
 
-        if(wave.enemyLists.Length >= waveIndex)
+        EnemiesAlive = wave.count;
+
+        for (int i = 0; i < wave.count; i++)
         {
-            for (int i = 0; i < wave.enemyLists.Length; i++)
-            {
-                for (int j = 0; j < wave.enemyLists[i].spawnCount; j++)
-                {
-                    Debug.Log(i.ToString() + ", " + j.ToString());
-                    if(i == 0 && j == 0)
-                    {
-                        SpawnEnemy(wave.enemyLists[i].enemyPrefab);
-                        continue;
-                    }
-                    yield return new WaitForSeconds(wave.enemyLists[i].spawnRate);
-                    SpawnEnemy(wave.enemyLists[i].enemyPrefab);
-                }
-            }
+            SpawnEnemy(wave.enemy);
+            yield return new WaitForSeconds(wave.rate);
         }
 
         waveIndex++;
-
-        if(waveIndex == waves.Length && EnemiesAlive == 0)
-        {
-            Debug.Log("Wave Won!");
-            this.enabled = false;
-        }
     }
 
     private void SpawnEnemy(GameObject enemyPrefab)
     {
         GameObject enemy = (GameObject)Instantiate(enemyPrefab, spawnPoint.transform.position, Quaternion.identity);
         enemy.transform.parent = gameObject.transform;
-        EnemiesAlive++;
     }
 
     public void UpdateWaveCountdownDisplayer()

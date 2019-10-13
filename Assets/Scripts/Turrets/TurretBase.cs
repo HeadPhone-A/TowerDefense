@@ -3,9 +3,7 @@
 public class TurretBase : MonoBehaviour
 {
     public Transform target;
-
     public Transform partToRotate = null;
-    public Transform firePoint = null;
     public LayerMask targetLayerMask = 0;
 
     public float damage = 20f;
@@ -17,17 +15,7 @@ public class TurretBase : MonoBehaviour
 
     public Enemy targetEnemy;
 
-    protected virtual void Start()
-    {
-        InvokeRepeating("UpdateTarget", 0f, 0.5f);
-    }
-
-    protected virtual void Update()
-    {
-        UpdateTurretRotate();
-    }
-
-    private void UpdateTurretRotate()
+    protected virtual void UpdateTurretRotate()
     {
         if (target == null)
         {
@@ -41,7 +29,7 @@ public class TurretBase : MonoBehaviour
         }
     }
 
-    private void UpdateTarget()
+    protected virtual void UpdateTarget()
     {
         Collider[] colls = Physics.OverlapSphere(transform.position, radius, targetLayerMask);
         Transform shortestTarget = null;
@@ -66,7 +54,7 @@ public class TurretBase : MonoBehaviour
         }
     }
 
-    private void OnDrawGizmosSelected()
+    protected virtual void OnDrawGizmosSelected()
     {
         if (fireRadiusGizmos)
         {

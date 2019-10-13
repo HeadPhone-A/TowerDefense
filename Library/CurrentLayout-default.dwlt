@@ -42,8 +42,8 @@ MonoBehaviour:
     y: 0
     width: 596
     height: 327
-  m_MinSize: {x: 102, y: 122}
-  m_MaxSize: {x: 4002, y: 4022}
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -164,7 +164,7 @@ MonoBehaviour:
   m_MinSize: {x: 817, y: 494}
   m_MaxSize: {x: 22012, y: 14044}
   vertical: 1
-  controlID: 145
+  controlID: 31
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -190,7 +190,7 @@ MonoBehaviour:
   m_MinSize: {x: 817, y: 494}
   m_MaxSize: {x: 22012, y: 14044}
   vertical: 0
-  controlID: 146
+  controlID: 32
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -291,8 +291,8 @@ MonoBehaviour:
     y: 0
     width: 317
     height: 1347
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 204, y: 222}
+  m_MaxSize: {x: 4004, y: 4022}
   m_ActualView: {fileID: 20}
   m_Panes:
   - {fileID: 20}
@@ -441,9 +441,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 7.2600155, y: -2.0781898, z: -18.796135}
+    m_Target: {x: -3.407312, y: 6.9241104, z: -28.7112}
     speed: 2
-    m_Value: {x: 7.2600155, y: -2.0781898, z: -18.796135}
+    m_Value: {x: -3.407312, y: 6.9241104, z: -28.7112}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -472,13 +472,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.4500295, y: 0.0072306525, z: -0.0036441064, w: -0.89299077}
+    m_Target: {x: -0.4188861, y: -0.018525058, z: 0.008547676, w: -0.9078227}
     speed: 2
-    m_Value: {x: -0.45002398, y: 0.0072305636, z: -0.0036440617, w: -0.8929798}
+    m_Value: {x: -0.4188811, y: -0.018524837, z: 0.008547574, w: -0.9078119}
   m_Size:
-    m_Target: 72.610085
+    m_Target: 52.537106
     speed: 2
-    m_Value: 72.610085
+    m_Value: 52.537106
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -497,8 +497,8 @@ MonoBehaviour:
     m_DynamicClip: 1
     m_OcclusionCulling: 0
   m_ShowGlobalGrid: 1
-  m_LastSceneViewRotation: {x: -0.17489192, y: -0.012703038, z: 0.0022595094, w: -0.98451346}
-  m_LastSceneViewOrtho: 0
+  m_LastSceneViewRotation: {x: -0.0032795775, y: 0.99672246, z: -0.05837479, w: -0.0559766}
+  m_LastSceneViewOrtho: 1
   m_ReplacementShader: {fileID: 0}
   m_ReplacementString: 
   m_SceneVisActive: 1
@@ -584,7 +584,7 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 14496
+  m_LastSelectedObjectID: 23138
 --- !u!114 &19
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -712,9 +712,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: a0380000
-      m_LastClickedID: 14496
-      m_ExpandedIDs: 78fbffff6a3a0000
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 7265ffff9267ffff78fbffff903a00003a590000385a00004e5a0000925a00002c5c00006a5c0000ea5e0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -777,20 +777,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs/Enemy/EnemyHavey
+    - Assets/Scripts/Turrets/LaserTurrets
   m_ViewMode: 1
-  m_StartGridSize: 96
+  m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Prefabs/Enemy/EnemyHavey
-  m_LastFoldersGridSize: 96
+  - Assets/Scripts/Turrets/LaserTurrets
+  m_LastFoldersGridSize: 16
   m_LastProjectPath: D:\Users\MYODAN\Documents\Unity\TowerDefense
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: da300000
-    m_LastClickedID: 12506
-    m_ExpandedIDs: 00000000822d0000442e0000042f000052310000fc310000ac320000ee3200005c340000b834000014350000663500007e3500006836000050410000524100005441000056410000584100005a4100005c4100005e41000060410000624100006441000066410000684100006a4100006c4100006e41000070410000724100007441000076410000784100007a4100007c4100007e41000080410000824100008441000086410000884100008a4100008c4100008e41000090410000924100009441000096410000984100009a410000
+    scrollPos: {x: 0, y: 64}
+    m_SelectedIDs: a8300000
+    m_LastClickedID: 12456
+    m_ExpandedIDs: 00000000902d0000542e0000142f0000182f0000a43000006a310000143200004432000008330000d434000030350000843500009c350000ae410000b0410000b2410000b4410000b6410000b8410000ba410000bc410000be410000c0410000c2410000c4410000c6410000c8410000ca410000cc410000ce410000d0410000d2410000d4410000d6410000d8410000da410000dc410000de410000e0410000e2410000e4410000e6410000e8410000ea410000ec410000ee410000f0410000f2410000f4410000f6410000f8410000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -806,7 +806,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 0}
+      m_ClientGUIView: {fileID: 11}
     m_SearchString: 
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
@@ -818,7 +818,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 272}
     m_SelectedIDs: d20b0200
     m_LastClickedID: 134098
-    m_ExpandedIDs: 00000000822d0000442e0000042f000052310000fc310000ee320000b834000014350000663500007e3500006836000050410000524100005441000056410000584100005a4100005c4100005e41000060410000624100006441000066410000684100006a4100006c4100006e41000070410000724100007441000076410000784100007a4100007c4100007e41000080410000824100008441000086410000884100008a4100008c4100008e41000090410000924100009441000096410000984100009a410000
+    m_ExpandedIDs: 00000000902d0000542e0000142f0000182f00006a3100001432000008330000d434000030350000843500009c350000ae410000b0410000b2410000b4410000b6410000b8410000ba410000bc410000be410000c0410000c2410000c4410000c6410000c8410000ca410000cc410000ce410000d0410000d2410000d4410000d6410000d8410000da410000dc410000de410000e0410000e2410000e4410000e6410000e8410000ea410000ec410000ee410000f0410000f2410000f4410000f6410000f8410000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -871,7 +871,7 @@ MonoBehaviour:
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
     m_ScrollPosition: {x: 0, y: 0}
-    m_GridSize: 96
+    m_GridSize: 16
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 273
 --- !u!114 &22
