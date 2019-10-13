@@ -34,7 +34,7 @@ public class LaserTurret : TurretBase
     protected void ShootLaser()
     {
         targetEnemy.TakeDamage(damage * Time.deltaTime);
-        targetEnemy.Slow(laserSlowPercent / 100);
+        targetEnemy.Slow(laserSlowPercent);
         if (laserLineRenderer.enabled == false)
         {
             laserLineRenderer.enabled = true;
