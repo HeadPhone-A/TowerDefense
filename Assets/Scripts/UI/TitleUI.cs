@@ -6,12 +6,11 @@ public class TitleUI : MonoBehaviour
 
     public void Play()
     {
-        sceneFader.FadeTo("MainScene");
+        sceneFader.FadeTo("LevelSelectScene");
     }
 
     public void Continue()
     {
-        sceneFader.FadeTo("MainScene");
         Debug.Log("Continue");
     }
 
