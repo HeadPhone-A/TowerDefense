@@ -19,14 +19,13 @@ public class Enemy : MonoBehaviour
     public Image healthBar;
     private Quaternion starthealthBarRotate;
 
-    private WaveSpawner waveSpawner;
+    private bool isDie = false;
 
     private void Start()
     {
         speed = startSpeed;
         health = startHealth;
         starthealthBarRotate = healthBar.transform.rotation;
-        waveSpawner = GameObject.Find("GameManager").GetComponent<WaveSpawner>();
     }
 
     private void Update()
@@ -42,6 +41,7 @@ public class Enemy : MonoBehaviour
         if (health <= 0)
         {
             Die();
+            isDie = true;
         }
     }
 
@@ -52,6 +52,10 @@ public class Enemy : MonoBehaviour
 
     private void Die()
     {
+        if (isDie)
+        {
+            return;
+        }
         PlayerStats.Money += lootMoney;
         GameObject effect = (GameObject)Instantiate(deathEffect, transform.position, Quaternion.identity);
         Destroy(effect, 5f);

@@ -1650,6 +1650,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fader: {fileID: 1379900100}
+  levelButtons:
+  - {fileID: 2144408124}
+  - {fileID: 1732606735}
 --- !u!4 &1557666601
 Transform:
   m_ObjectHideFlags: 0
@@ -1857,6 +1860,18 @@ MonoBehaviour:
   m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
+--- !u!114 &1732606735 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4419007938321943989, guid: 9034ad6b18574464fb0e8c6462e6cf46,
+    type: 3}
+  m_PrefabInstance: {fileID: 1316912328}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1946306110
 GameObject:
   m_ObjectHideFlags: 0
@@ -2070,6 +2085,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneFader: {fileID: 1379900100}
+--- !u!114 &2144408124 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4419007938321943989, guid: 9034ad6b18574464fb0e8c6462e6cf46,
+    type: 3}
+  m_PrefabInstance: {fileID: 4419007939423105946}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2552085420023512862
 GameObject:
   m_ObjectHideFlags: 0
@@ -16702,6 +16729,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1557666600}
+    - target: {fileID: 4419007938321943978, guid: 9034ad6b18574464fb0e8c6462e6cf46,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9034ad6b18574464fb0e8c6462e6cf46, type: 3}
 --- !u!4 &5583199400219368909

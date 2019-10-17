@@ -7,13 +7,15 @@ public class WaveSpawner : MonoBehaviour
     public static int EnemiesAlive = 0;
 
     public GameObject spawnPoint;
-    //public TMP_Text waveDisplayer;
+    public TMP_Text waveDisplayer;
     public TMP_Text waveCountdownDisplayer;
-    //public TMP_Text enemyAliveDisplayer;
+    public TMP_Text enemyAliveDisplayer;
 
     public float timeBetweenWaves = 5f;
 
     public Wave[] waves;
+
+    public GameManager gameManager;
 
     private float countdown = 2f;
 
@@ -21,13 +23,21 @@ public class WaveSpawner : MonoBehaviour
 
     private void Update()
     {
+        
+        enemyAliveDisplayer.text = "Alive Enemy " + EnemiesAlive.ToString();
 
         if (EnemiesAlive > 0)
         {
-            countdown = timeBetweenWaves;
-            UpdateWaveCountdownDisplayer();
             return;
         }
+
+        if (waveIndex == waves.Length)
+        {
+            gameManager.WinLevel();
+            this.enabled = false;
+        }
+
+        waveDisplayer.text = "Wave " + (waveIndex + 1).ToString();
 
         if (countdown <= 0f)
         {
@@ -37,7 +47,8 @@ public class WaveSpawner : MonoBehaviour
         }
 
         countdown -= Time.deltaTime;
-        UpdateWaveCountdownDisplayer();
+        countdown = Mathf.Clamp(countdown, 0f, Mathf.Infinity);
+        waveCountdownDisplayer.text = string.Format("{0:0.00}", countdown);
     }
 
     IEnumerator SpawnWave()
@@ -61,11 +72,5 @@ public class WaveSpawner : MonoBehaviour
     {
         GameObject enemy = (GameObject)Instantiate(enemyPrefab, spawnPoint.transform.position, Quaternion.identity);
         enemy.transform.parent = gameObject.transform;
-    }
-
-    public void UpdateWaveCountdownDisplayer()
-    {
-        countdown = Mathf.Clamp(countdown, 0f, Mathf.Infinity);
-        waveCountdownDisplayer.text = string.Format("{0:0.00}", countdown);
     }
 }
