@@ -38,10 +38,9 @@ public class Enemy : MonoBehaviour
     {
         health -= amount;
 
-        if (health <= 0)
+        if (health <= 0 && isDie == false)
         {
             Die();
-            isDie = true;
         }
     }
 
@@ -52,10 +51,7 @@ public class Enemy : MonoBehaviour
 
     private void Die()
     {
-        if (isDie)
-        {
-            return;
-        }
+        isDie = true;
         PlayerStats.Money += lootMoney;
         GameObject effect = (GameObject)Instantiate(deathEffect, transform.position, Quaternion.identity);
         Destroy(effect, 5f);

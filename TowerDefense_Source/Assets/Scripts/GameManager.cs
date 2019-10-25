@@ -3,13 +3,10 @@
 public class GameManager : MonoBehaviour
 {
     public GameObject gameOverUI;
+    public GameObject completeLevelUI;
 
     public static bool GameIsOver = false;
 
-    public string nextLevel = "Level02";
-    public int levelToUnlock = 2;
-
-    public SceneFader sceneFader;
 
     private void Start()
     {
@@ -42,8 +39,7 @@ public class GameManager : MonoBehaviour
 
     public void WinLevel()
     {
-        Debug.Log("Game Won!");
-        PlayerPrefs.SetInt("levelReached", levelToUnlock);
-        sceneFader.FadeTo(nextLevel);
+        GameIsOver = true;
+        completeLevelUI.SetActive(true);
     }
 }
