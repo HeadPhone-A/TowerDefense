@@ -15,6 +15,16 @@ public class TurretBase : MonoBehaviour
 
     public Enemy targetEnemy;
 
+    protected virtual void Start()
+    {
+        InvokeRepeating("UpdateTarget", 0f, 0.5f);
+    }
+
+    protected virtual void Update()
+    {
+        UpdateTurretRotate();
+    }
+
     protected virtual void UpdateTurretRotate()
     {
         if (target == null)

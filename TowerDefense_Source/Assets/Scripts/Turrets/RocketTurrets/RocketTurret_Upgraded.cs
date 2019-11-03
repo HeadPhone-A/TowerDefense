@@ -1,13 +1,23 @@
 ﻿using UnityEngine;
 
-public class RocketTurret_Upgraded : RocketTurret
+public class RocketTurret_Upgraded : TurretBase
 {
     public Transform firePoint;
+    public float fireRate = 0.3f;
 
+    public float bulletSpeed = 50f;
+    public GameObject bulletPrefab = null;
+    public GameObject bulletImpactEffect = null;
+
+    public float explosionRadius = 5f;
+    public LayerMask explosionTargetLayerMask = 0;
+
+    public float currentFireRate;
+    public int firePointCount;
 
     protected override void Update()
     {
-        UpdateTurretRotate();
+        base.Update();
         if (target != null)
         {
             currentFireRate -= Time.deltaTime;
@@ -19,7 +29,7 @@ public class RocketTurret_Upgraded : RocketTurret
         }
     }
 
-    protected override void ShootBullet()
+    protected void ShootBullet()
     {
         GameObject bulletGameObject = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         bulletGameObject.transform.parent = gameObject.transform;

@@ -10,15 +10,15 @@ public class LaserTurret : TurretBase
     public ParticleSystem laserImpactEffect;
     public Light laserImpactLight;
 
-    protected virtual void Start()
+    protected override void Start()
     {
         InvokeRepeating("UpdateTarget", 0f, 0.5f);
         laserImpactLight = laserImpactEffect.GetComponentInChildren<Light>();
     }
 
-    protected virtual void Update()
+    protected override void Update()
     {
-        UpdateTurretRotate();
+        base.Update();
         if (target != null)
         {
             ShootLaser();

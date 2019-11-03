@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
-using TMPro;
 
 public class GameOver : MonoBehaviour
 {
@@ -16,4 +15,3 @@ public class GameOver : MonoBehaviour
         sceneFader.FadeTo("TitleScene");
     }
 }
-

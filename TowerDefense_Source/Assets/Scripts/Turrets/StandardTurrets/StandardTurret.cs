@@ -12,14 +12,9 @@ public class StandardTurret : TurretBase
     protected float currentFireRate;
     protected int firePointCount;
 
-    protected void Start()
+    protected override void Update()
     {
-        InvokeRepeating("UpdateTarget", 0f, 0.5f);
-    }
-
-    protected virtual void Update()
-    {
-        UpdateTurretRotate();
+        base.Update();
         if (target != null)
         {
             currentFireRate -= Time.deltaTime;
@@ -36,7 +31,7 @@ public class StandardTurret : TurretBase
         }
     }
 
-    protected virtual void ShootBullet()
+    protected void ShootBullet()
     {
         GameObject bulletGameObject = Instantiate(bulletPrefab, firePoints[firePointCount].position, firePoints[firePointCount].rotation);
         bulletGameObject.transform.parent = gameObject.transform;
